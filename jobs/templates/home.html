@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-66af0e8f-dfd4-4338-bc2b-71f5f44ca0a9@mhtml.blink" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Griffins Kimutai </title>
+    
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.4/examples/album/album.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+           
+            <a class="navbar-brand" href="{%  url 'home' %}">Griffins Kimutai</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li ><a href="http://twitter.com/griffokim">Twitter</a></li>
+              <li><a href="{% static 'resume.pdf' %}">Resume</a></li>
+              <li><a href="{% url 'allblogs' %}">Blog</a></li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+          
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1> Hi, I'm Griffins </h1>
+      <p class="lead text-muted">Hey, my name is Griffins.I love to make Django websites. It's the thrill of handling requests that the people want!</p>
+      <p>
+        <a href="mailto:kimutaigriffins@gmail.com" class="btn btn-primary my-2">Email</a>
+        
+      </p>
+      <img src="{% static 'me.jpg' %}"alt="me" height=300 width=300>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        {% for job in jobs.all  %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow">
+           <img class=img-responsive card-img-top src="{{ job.image.url  }}"  height="10" alt="">
+            <div class="card-body">
+              <p class="card-text">{{ job.summary }}</p>
+              
+            </div>
+          </div>
+         
+        </div> 
+        {%  endfor %}
+       
+
+</main>
+
+<footer class="text-muted">
+  <div class="container text-center">
+     <p >
+      ©Griffins Kimutai {% now "Y" %}
+     </p>
+  </div>
+</footer>
+
+      
+
+</body>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</html>
+</body></html>
